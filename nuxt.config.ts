@@ -1,5 +1,12 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
+import { nodePolyfills } from "vite-plugin-node-polyfills";
+
 export default defineNuxtConfig({
+  vite: {
+    plugins: [
+      nodePolyfills(),
+    ],
+  },
   devtools: { enabled: true },
   modules: ["nuxt-primevue", "@pinia/nuxt"],
   primevue: {
